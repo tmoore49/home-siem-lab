@@ -47,3 +47,9 @@ All 10 failed logins came from one source IP 10.0.2.17,targeting the SQL server 
 The attacker targeted 10 accounts with one attempt each, including the admin accounts sa and root and built-in SQL Server accounts. One attempt per account is the classic password Spraying pattern.
 
 <img width="1890" height="907" alt="moneyshot" src="https://github.com/user-attachments/assets/40445c6b-6f02-48ce-afe7-dd9126700bdb" />
+
+## Findings 
+- Password Spraying attack from 10.0.2.17 against the SQL Server on MSEDGENWIN10
+- 10 accounts targeted,one attempt each
+- All attempts within one second so,automated
+- Zero successful logins(no 18454 events),no compromise

@@ -49,7 +49,10 @@ The attacker targeted 10 accounts with one attempt each, including the admin acc
 <img width="1890" height="907" alt="moneyshot" src="https://github.com/user-attachments/assets/40445c6b-6f02-48ce-afe7-dd9126700bdb" />
 
 ## Findings 
-- Password Spraying attack from 10.0.2.17 against the SQL Server on MSEDGENWIN10
+- Password Spraying attack from 10.0.2.17 against the SQL Server on MSEDGEWIN10
 - 10 accounts targeted,one attempt each
 - All attempts within one second so,automated
 - Zero successful logins(no 18454 events),no compromise
+
+## Grep vs Splunk 
+Grep just works line by line, and the account names sat on a different line from the IP, so grepping 10.0.2.17 never showed them. Splunk treats each whole event as one unit,so the IP and account show up together.

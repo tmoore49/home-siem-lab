@@ -7,7 +7,8 @@
  - Uploaded MSSQL.xml to Splunk cloud free trial
  - Created a custom source type,mssql_evtx_xml, with LINE_BREAKER set to split each `<event>` into its own event
 
-![XML file](01%20xml%20file.png)
+
+
 
 ## Investigation 
 
@@ -15,7 +16,8 @@
 `sourcetype="mssql_evtx_xml"`
 11 events 10 failed logins plus XML header 
 
-<img width="1920" height="1080" alt="02-all-events" src="https://github.com/user-attachments/assets/bcd08ef7-ecaf-4eb8-865a-0a02f33d1292" />
+<img width="1905" height="911" alt="02-systemtime" src="https://github.com/user-attachments/assets/0b140850-4396-4851-bfee-5052d4b8f8be" />
+
 
 ### 2. Timing
 

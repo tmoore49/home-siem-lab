@@ -7,6 +7,7 @@
  - Uploaded MSSQL.xml to Splunk cloud free trial
  - Created a custom source type,mssql_evtx_xml, with LINE_BREAKER set to split each `<event>` into its own event
 
+<img width="1902" height="1017" alt="01 xml file" src="https://github.com/user-attachments/assets/120c23bb-b1ec-4b7a-a8ed-5a4e60e9c14d" />
 
 
 

@@ -38,4 +38,12 @@ Event ID 18454 means a successful login. Zero result,so none of the 18456 failed
 `sourcetype="mssql_evtx_xml" 10.0.2.17`
 
 All 10 failed logins came from one source IP 10.0.2.17,targeting the SQL server MSEDGEWIN10
+
 <img width="1897" height="920" alt="02 attacker  tip" src="https://github.com/user-attachments/assets/1a108e07-e08f-4ee8-8aaa-890ba207e012" />
+
+### 5. targeted accounts 
+`sourcetype="mssql_evtx_xml" 10.0.2.17 | rex "Data>&lt;string&gt;(?<account>[^&]+)" | stats count by account`
+
+The attacker targeted 10 accounts with one attempt each, including the admin accounts sa and root and built-in SQL Server accounts. One attempt per account is the classic password Spraying pattern.
+
+<img width="1890" height="907" alt="moneyshot" src="https://github.com/user-attachments/assets/40445c6b-6f02-48ce-afe7-dd9126700bdb" />

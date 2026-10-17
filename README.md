@@ -13,7 +13,7 @@
 
 ## Investigation 
 
-### 1 All events
+### 1. All events
 `sourcetype="mssql_evtx_xml"`
 11 events 10 failed logins plus XML header 
 

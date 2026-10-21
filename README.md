@@ -37,7 +37,7 @@ Event ID 18454 means a successful login. Zero result,so none of the 18456 failed
 ### 4. Attacker source
 `sourcetype="mssql_evtx_xml" 10.0.2.17`
 
-All 10 failed logins came from one source IP 10.0.2.17,targeting the SQL server MSEDGEWIN10
+All 10 failed logins came from one source IP 10.0.2.17, targeting the SQL server MSEDGEWIN10
 
 <img width="1897" height="920" alt="02 attacker  tip" src="https://github.com/user-attachments/assets/1a108e07-e08f-4ee8-8aaa-890ba207e012" />
 
@@ -50,9 +50,10 @@ The attacker targeted 10 accounts with one attempt each, including the admin acc
 
 ## Findings 
 - Password Spraying attack from 10.0.2.17 against the SQL Server on MSEDGEWIN10
-- 10 accounts targeted,one attempt each
-- All attempts within one second so,automated
-- Zero successful logins(no 18454 events),no compromise
+- 10 accounts targeted, one attempt each
+- All attempts within one second, so automated
+- Zero successful logins (no 18454 events), no compromise
+- MiTRE ATT&CK: Credential Access, Brute Force: Password Spraying (T1110.003)
 
 ## Grep vs Splunk 
 Grep just works line by line, and the account names sat on a different line from the IP, so grepping 10.0.2.17 never showed them. Splunk treats each whole event as one unit,so the IP and account show up together.
